@@ -1,0 +1,86 @@
+@import "~bootstrap/scss/bootstrap";
+
+@font-face {
+  font-family: "Biennale Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../public/assets/fonts/BiennaleRegular.otf") format("opentype");
+}
+
+html,
+body {
+  height: 100%;
+  font-family: "Biennale Regular";
+}
+
+#__next {
+  height: 100%;
+  display: flex;
+  flex: 1 1 0;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+}
+
+@import "./config.scss";
+@import "./login.scss";
+@import "./header.scss";
+@import "./footer.scss";
+@import "./filtros.scss";
+@import "./item.scss";
+@import "./list.scss";
+@import "./modal.scss";
+
+input,
+select {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  letter-spacing: 0.01em;
+  color: $primaryColor;
+  min-width: 170px;
+  background-color: transparent;
+  font-family: "Biennale Regular";
+
+  border-top-width: 0px;
+  border-left-width: 0px;
+  border-right-width: 0px;
+  border-bottom-width: 0.01em;
+  border-color: $mediumGrayColor;
+
+  outline: none;
+
+  cursor: pointer;
+
+  &:focus {
+    border-color: $primaryColor;
+  }
+
+  &::placeholder {
+    color: $mediumGrayColor;
+    opacity: 1;
+  }
+
+  &:-ms-input-placeholder {
+    color: $mediumGrayColor;
+  }
+
+  &::-ms-input-placeholder {
+    color: $mediumGrayColor;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  input,
+  select {
+    border-top-width: 1px;
+    border-left-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-radius: 8px;
+    padding: 5px;
+    outline: none;
+  }
+}
